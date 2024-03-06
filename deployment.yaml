@@ -17,6 +17,10 @@ spec:
         image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/kubernetes:sfds-web-163
         ports:
         - containerPort: 8000
+      - name: sdfs-web
+        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/kubernetes:sfds-fe-163
+        ports:
+        - containerPort: 3000
       imagePullSecrets:
       - name: my-ecr-secret
 
