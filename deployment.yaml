@@ -32,7 +32,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: sdfs-web
+    app: sdfs-fe
   ports:
     - protocol: TCP
       port: 80
