@@ -34,4 +34,41 @@ spec:
       port: 80
       targetPort: 8000
 
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fe-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sdfs-fe
+  template:
+    metadata:
+      labels:
+        app: sdfs-fe
+    spec:
+      containers:
+      - name: sdfs-fe
+        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/kubernetes:sfds-fe-173
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: my-ecr-secret
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sdfs-fe-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: sdfs-fe
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
 
