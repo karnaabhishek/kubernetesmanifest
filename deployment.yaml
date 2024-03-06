@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sdfs-web
-        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/kubernetes:sfds-web-162
+        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/kubernetes:sfds-web-163
         ports:
         - containerPort: 8000
       imagePullSecrets:
