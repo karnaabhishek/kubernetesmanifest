@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sdfs-web
-        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/be:sfds-web-17
+        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/be:sfds-web-18
         ports:
         - containerPort: 8000
       imagePullSecrets:
@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: sdfs-fe
-        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/fe:sfds-fe-17
+        image: 381492068250.dkr.ecr.ap-south-1.amazonaws.com/fe:sfds-fe-18
         ports:
         - containerPort: 3000
       imagePullSecrets:
